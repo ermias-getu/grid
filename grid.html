@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+    <style>
+.gridlayout{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+   column-gap: 10px;
+    row-gap: 40px;
+}
+.tumbnail1{
+    display: grid;
+    grid-template-columns: 200px;
+
+}
+.tumbnail2{
+    display: grid;
+    grid-template-columns: 200px;
+}
+.tumbpic{
+    width: 100%;
+}
+.pic-mutualfriend{
+ display: grid;
+ grid-template-columns: 30px 1fr;
+ column-gap: 10px;
+    row-gap: 10px;
+}
+.profile-pic{
+    width: 100%;
+   
+
+}
+.profile-picc{
+    position: relative;
+}
+.notification{
+    background-color: red;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    padding: 2px;
+    border-style: none;
+    border-radius: 100px;
+    color: white;
+    
+}
+.addfriend{
+    background-color: blue;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+
+}
+.profile-name{
+    font-weight: bold;
+}
+.mutualfriend{
+    color:gray;
+}
+/* .notifiction-container{
+    background-color:
+} */
+body{
+    top:0;
+    box-sizing: 0;
+    margin-bottom: 1000px;
+}
+.tooltip{
+    position: absolute;
+    bottom:10;
+    color:rgb(255, 255, 255);
+    background-color: black;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+}
+.profile-picc:hover .tooltip{
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div class="gridlayout">
+        <div class="tumbnail1">
+            <div class="numbnail-pic">
+                <img class ="tumbpic"src="ermias-rectangle.jpg" alt="tumbnail">
+            </div>
+
+            <div class="profiledetail">
+                <div class="profile-name">Ermias</div>
+                <div class="pic-mutualfriend">
+                    <div class="profile-pic">
+                        <img class="profile-pic" src="ermias-circle.jpg">
+                    </div>
+                    <div class="mutualfriend">2 mutual friend</div>
+    
+                </div>
+                <div class="addfriend">Add friend</div>
+            </div>
+        </div>
+
+        <div class="tumbnail2">
+
+            <div class="numbnail-pic">
+                <img class ="tumbpic"src="ermias-rectangle.jpg" alt="tumbnail">
+            </div>
+            <div class="profiledetail">
+                <div class="profile-name">Oliver</div>
+                <div class="pic-mutualfriend">
+                    <div class="profile-picc">
+                    <div class="pic">
+                        <img class="profile-pic" src="ermias-circle.jpg">
+                    </div>
+                    <div class= "notification">3 
+                    </div>
+
+                    <div class="tooltip">Ermias!</div>
+                    </div>
+                    
+                    <div class="mutualfriend">2 mutual friend</div>
+    
+                </div>
+                <div class="addfriend">Add friend</div>
+            </div>
+        </div>
+
+    </div>
+    <p>to put elements on top on the side of other elements 
+        we use relative and absolute</p>
+<div class="notifiction-container">
+
+    <div class="notify">3</div>
+</div>
+    
+    
+</body>
+</html>
